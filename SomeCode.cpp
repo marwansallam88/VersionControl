@@ -8,9 +8,15 @@ int getSum(vector<int> elements){
     return accumulate(elements.begin(),elements.end(),0);
 }
 
+int getAverage(vector<int> elements){
+    return accumulate(elements.begin(),elements.end(),0)/elements.size();
+}
+
 int main() {
     vector<int> v = {0,1,2,3,4,5,6,7,8,9};
     cout << "Sum of all the elements are:  "
         << getSum(v) << endl;
+    cout << "Average of all the elements are:  "
+        << getAverage(v) << endl;
    return 0;
 }
